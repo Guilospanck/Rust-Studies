@@ -8,7 +8,7 @@ And then it will create a folder called `project_name` with a `Cargo.lock` and `
 ## Cargo.toml
 It's similar to `package.json`.
 
-## Compiling a project
+## Compiling and Executing a project
 ```bash
 cargo run
 ```
