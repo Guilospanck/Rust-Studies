@@ -1,0 +1,2 @@
+# Struct
+Structs in Rust.
