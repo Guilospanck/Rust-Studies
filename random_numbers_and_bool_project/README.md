@@ -9,6 +9,5 @@ rand = "*"
 ```
 Then in your `.rs` file, you have to add the:
 ```rust
-extern crate rand; // to use the external library
 use rand::Rng; // what you want to use from that library
 ```
