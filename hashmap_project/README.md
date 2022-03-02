@@ -1,0 +1,2 @@
+# Hashmaps
+Hashmaps in Rust.
