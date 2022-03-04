@@ -25,6 +25,11 @@ cargo run
 ```
 The executable file will be at `target/debug/project_name`.
 
+### Running tests
+```bash
+cargo test
+```
+
 ## Rust version
 ```bash
 rustc --version
