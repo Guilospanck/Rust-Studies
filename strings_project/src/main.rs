@@ -27,6 +27,46 @@ fn main() {
   let str_to_add = ". Nice to Meet you!";
   let result = format!("{}{}", my_string, str_to_add);
   my_string = &result;
-
   println!("{}", my_string);
+
+  // replace
+  {
+    let my_string: String = String::from("Rust is fantastic!");
+    println!("After replace: {}", my_string.replace("fantastic", "great"));
+  }
+  
+  // separate into lines
+  {
+    let my_string: String = String::from("Hello\nThis is the first line\nThis is the second line");
+    for line in my_string.lines() {
+      println!("[ {} ]", line);
+    }
+  }
+
+  // split
+  {
+    let my_string: String = String::from("Leave+a+like+if+you+like+it");
+    let tokens: Vec<&str> = my_string.split("+").collect();
+    for token in tokens {
+      print!("{}-\n", token);
+    }
+  }
+
+  // strim
+  {
+    let my_string: String = String::from("     So much space!    ");
+    println!("Trimmed:\n{}", my_string.trim());
+  }
+
+  // char
+  {
+    let my_string: String = String::from("Guilherme");
+
+    match my_string.chars().nth(4) {
+      Some(c) => println!("Found char at index 4: {}", c),
+      None => println!("No chat at index 4.")
+    }
+
+  }
+
 }
