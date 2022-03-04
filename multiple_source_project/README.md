@@ -26,3 +26,62 @@ fn main(){
   guilherme::print_name();
 }
 ```
+
+### Defining modules (mod)
+You can also create modules by using the keyword `mod`:
+```rust
+// main.rs
+mod person {
+  pub fn print_person_name(){
+    println!("My name is Guilherme");
+  }  
+}
+
+fn main() {
+  person::print_person_name(); // My name is Guilherme
+}
+```
+You can also call private functions from public functions:
+```rust
+// main.rs
+mod person {
+  fn chicken(){
+    println!("Chicken!");
+  }
+
+  pub fn print_person_name(){
+    println!("My name is Guilherme");
+    chicken();
+  }  
+}
+
+fn main() {
+  person::print_person_name(); // My name is Guilherme \n Chicken!
+}
+```
+And, you can also create modules inside modules:
+```rust
+// main.rs
+mod person {
+  fn chicken(){
+    println!("Chicken!");
+  }
+
+  pub fn print_person_name(){
+    println!("My name is Guilherme");
+    chicken();
+  } 
+
+  pub mod snake {
+    pub fn print_snake_name(){
+      println!("Snake name!");
+    }
+  }
+}
+
+fn main() {
+  person::print_person_name(); // My name is Guilherme \n Chicken!
+
+  person::snake::print_snake_name(); // Snake name!
+}
+```
